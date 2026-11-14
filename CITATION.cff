@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use Flash-ABIDES, please cite it as below."
+type: software
+title: "Flash-ABIDES: Accelerated Market Simulation for AI Agents"
+authors:
+  - given-names: Göktürk Batın
+    family-names: Dervişoğlu
+  - given-names: Muhammed Faruk
+    family-names: Aytin
+  - given-names: Muhammed Rüşen
+    family-names: Birben
+license: MIT
+repository-code: "https://github.com/Mfaytinn/flash-abides"
+keywords:
+  - market simulation
+  - limit order book
+  - ABIDES
+  - agent-based modeling
+  - AI agents

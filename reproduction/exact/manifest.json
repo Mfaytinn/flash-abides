@@ -1,0 +1,101 @@
+{
+  "commit": "3686937a6b299b3948f92fc5b84f0ab76d9bda9f",
+  "source_transform": {
+    "description": "Removed the inactive scenario-delay diagnostic, its build option and seven compile-time statistics diagnostic groups. Whitespace/comment padding in the canonical archive preserves the original GCC PGO source locations. Live source is LLVM-formatted separately. Removed Intel oneAPI compiler selection, Intel PGO build options and Intel-specific compiler guards; GCC and generic Clang behavior are preserved.",
+    "original_source_sha256": {
+      "engine/CMakeLists.txt": "a3bf537b59cc6229e50547e268359771f92f40633386de275ca6a72675e7271a",
+      "engine/src/main.cpp": "c59d6f5d1cdecbcf7e133e93cf215838fef37687ae5c87a77126096a1f38a9fc",
+      "engine/include/t3/book.hpp": "520659a813ada63525eb0ac4c4ae9b27a45a1c282c73652e33989d0185fb3379",
+      "engine/include/t3/deferqueue.hpp": "424af22eefb3f2c5212417bcd0e3c4fa130bc3c1b983e795d69d7b2a79878192",
+      "engine/include/t3/drawstream.hpp": "9fa71feaaaaf5f4deb3c4365ac82195779eba1e86714f9b9e15aa303278c85ad",
+      "engine/include/t3/eventheap.hpp": "a967830f49de869afca58eb476dc8ef497eeb43d595b10e54dda6608cf2848ed",
+      "engine/include/t3/eventwheel.hpp": "39ce1501e70fefa19ca0de0d456e5c65554e46ee6a2d3b18f6a3b9ff1e73d0b7",
+      "engine/include/t3/latency.hpp": "81a559583f06fbf51cce5f988784fc62014ece137a22c8ae065cb1f05b0a2e0e",
+      "engine/include/t3/nswheel.hpp": "36c0ee19e0214b643fa1bb76b23c2c39f3c3190aac19ebabf419ebd938a29f97",
+      "engine/include/t3/openorders.hpp": "e879548864f19bdd7ff50740f94a6cd7bc78bcbd67cd87cfa7637a3f74c8f78c",
+      "engine/src/sim_kernel.inc": "61a0793ee1aa2c6ce1c1ee3c99fbb8253d7b49f00fb015c72a411e5edb8ecce8",
+      "engine/include/t3/json.hpp": "60587d58b81d4d551c64483e6d4a731480d0ac990815902953a732332c158a46",
+      "engine/include/t3/sha256.hpp": "58e176171cd3a4fca1f66a691779b773c1c0761547d84108c3e56fa82444bc70"
+    },
+    "removed_inactive_groups": [
+      "T3_BOOK_STATS",
+      "T3_DEFER_STATS",
+      "T3_DRAW_STATS",
+      "T3_FASTLOG_STATS",
+      "T3_HEAP_STATS",
+      "T3_OPENORDERS_STATS",
+      "T3_WHEEL_STATS"
+    ],
+    "statistics_cleanup_mode": "preserve-noop-compatibility",
+    "retained_compatibility": "No-op count macros and the empty stats_moved helper remain because removing them changed the native executable hash. Removing the conditional diagnostics alone reproduced the submitted Final exactly.",
+    "previous_canonical_archive_sha256": "760c97a053052e1c4b601432353e49bf899c8eef49d28d04c3a852dee5050224",
+    "removed_compiler_support": "Intel oneAPI (icpx) selection and Intel-specific PGO/fast-math build configuration",
+    "compiler_cleanup_previous_archive_sha256": "c87d517385cb48488c86b0fa750818eb3ef767a326d0e897f68c80a8179e7c5f"
+  },
+  "source_sha256": {
+    "engine/CMakeLists.txt": "90ac32920698bfdd531dbd7d81a6045f790cad0b34dfea2132fef2610e884e0b",
+    "engine/src/sim.cpp": "9a646e7d17d79eacb759c4f37dcb743bfd2ba02491e0d13dc1a43b461ff4573d",
+    "engine/src/json.cpp": "98a3d4c35ef0ea63437fc70ead4ff3dae1fdb798d0b1e2b1c9f74b12cecb9e8c",
+    "engine/src/sim_wheel.cpp": "6e568259bde9139a5042cce62b7c200c5a23174491f3ef0437e95c524fe93ed4",
+    "engine/src/output.cpp": "b39969d4f7cb2a43e9ca372ac843ea9a76528d3d131cbac1f7bc7a163a76ddb3",
+    "engine/src/sim_linewheel_lean.cpp": "d4f822ac686f83d856ee2df6c98e4e02b3bc1f4cffce5244d9c3d2d679b493b6",
+    "engine/src/scenario.cpp": "5f2eeb1933edbbf20aaa29a5d5503d9699ddc18c45afb93497cba4eb679b8228",
+    "engine/src/main.cpp": "9191a0af4685e4fca8317e4d4d3ef1dab5929ad6175eb420e199a0fdfcbeea0e",
+    "engine/src/sim_kernel.inc": "d155439cf70f4ec8ae38734e93a77523de1d2a6f63bcb01d42cb1dfa9ac19013",
+    "engine/src/parquet.cpp": "38346e71a629808c8f9eca4f6689d8f6c29e32c680c0aa75d8366804611cefe2",
+    "engine/src/sim_nswheel.cpp": "0e58ba701e2019eb110894b61339d15ca076fb354531e887054ccdae7fadbc9c",
+    "engine/src/snappy.cpp": "74f5e421c6d0b5ca04154ad4ded8cabb198e4f1d1bdc0fbeb07b9d7bce017dc1",
+    "engine/src/sim_linewheel.cpp": "78bbfa5c03cc70f325b300d5c352ad507b41510701ac2589e3424260fa3e7ac2",
+    "engine/src/sim_nswheel_lean.cpp": "3abd11ee0f1544dc2b0c269c0146ba022488baa6f877da3d9e757c50287af35d",
+    "engine/include/t3/eventwheel.hpp": "8a7a4077a8a03ab2f5225c48c22324b79885fcefa992decb19a088d1eec82757",
+    "engine/include/t3/json.hpp": "da9850cc426b781c6764b18036cfde6f07c5aba4ae2adbd8e05a5980a3d3b653",
+    "engine/include/t3/scenario.hpp": "1d6fbf843aef63af4258733975bfedef44a6a16e1df573f9f8f971700da38277",
+    "engine/include/t3/arena.hpp": "e83ae88f4915d8241868fa19b9756d4a69d83aef22d684759d7e3c3c5e335b28",
+    "engine/include/t3/eventqueue.hpp": "f9559bd847a7567115311041dc12beec07b1322b5a23446da7ca4aba6885b2a0",
+    "engine/include/t3/snappy.hpp": "5d255559d35f322492d4fc04d94209cee733a61b4e08cd4e125d39ee8689442e",
+    "engine/include/t3/drawstream.hpp": "699b8f062af2dbe9e249efbfff96cd8caf8112fa8904ab45b0666c31def52de1",
+    "engine/include/t3/card.hpp": "b2cd6faca397cd91ad220316f55b6d5cd1246bc83af98904ca2cd9bae88b7e79",
+    "engine/include/t3/fastlog.hpp": "87b2902d43f0f91669c6300a312638cf03e0bd05536b23054abd7326ff542aa9",
+    "engine/include/t3/parallel.hpp": "9612b2754650f388a4714e86999a0b146c998bea84c7c434384eba69db0818a3",
+    "engine/include/t3/deferqueue.hpp": "389899f96fc32e29abcf17ec9da80af0dac4af425ef0e1dfa20ac210286619ce",
+    "engine/include/t3/sha256.hpp": "5f7ac36b5350a82fc76ecfc127c05d749caa8dbe281467380a5795ef6e65b0c0",
+    "engine/include/t3/bigarray.hpp": "4d7f5a3a77881e955dd76aa32010b24b48298d40ecef32e24bf14b5eba9ecccb",
+    "engine/include/t3/parquet.hpp": "aae2845e4848eba2e35885352750aaf6aa9ac6e639625dfa3e8ac8b8992b1111",
+    "engine/include/t3/streams.hpp": "8a00323f5b0739c6561e4786284758de6f3ff150e882d0aab5a4f69fb05543e1",
+    "engine/include/t3/repset.hpp": "6008dc0aa9471130979bf3a818032d3f99c2dfac02e77f63460038e99adfc033",
+    "engine/include/t3/openorders.hpp": "50ccb152fcde0e5e25c1f996d5aa431a1d32403882b2debf2927da6d9c057a6e",
+    "engine/include/t3/nswheel.hpp": "35a29388087eb656ec5aa5785bbe0b8490a788fe8c3b5c7889cbc0eb2358fc69",
+    "engine/include/t3/book.hpp": "a3dd60c40718c52823a1c0e8e1b53f14af25b3c1708ea94f4ce630768efce732",
+    "engine/include/t3/latency.hpp": "5d2abc8cd78da7a03cfce0865c18cb2686492ba597bd2cb276d334ae5d3de179",
+    "engine/include/t3/eventheap.hpp": "bed00574bd31c409b393eec746522c377fe369ddba8a29f2d3995556268a24f1",
+    "engine/include/t3/rng.hpp": "611165afc8076c5aa1fdc9c2e0dcf9af0fea16ad7edf8b0c3e6be77342509530",
+    "engine/include/t3/output.hpp": "3d804133d068fc28ad164b20d049099e72720bf136c1bd1dd217235f68bc14d9",
+    "engine/include/t3/sim.hpp": "fedb3735b48f8819d009a31db5c90f9127ffe820148235b4e6b0177a2ebbb6fb"
+  },
+  "compilers": {
+    "gcc": "x86_64-linux-gnu-g++-16 (Ubuntu 16.2.0-3ubuntu1) 16.2.0\nCopyright (C) 2026 Free Software Foundation, Inc.\nThis is free software; see the source for copying conditions.  There is NO\nwarranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.\n\n"
+  },
+  "variants": {
+    "gcc": {
+      "binary_sha256": "a0ffe98228ae20d8915843516ca970a3fb39287ccaa83fd83f3613be96351369",
+      "profile_files": {
+        "raw/#home#verisalis003_gmail_com#compiler-pgo-gokturk-20261013#gcc#build#CMakeFiles#t3core.dir#src#sim_linewheel.cpp.gcda": "d8678074d39f22a81c560d627933bdfacc0f9050d312459bfde7ba2c22ef5f79",
+        "raw/#home#verisalis003_gmail_com#compiler-pgo-gokturk-20261013#gcc#build#CMakeFiles#t3core.dir#src#json.cpp.gcda": "a2f28b366d2f6efa770a82ac3bcf0910e773b111b165d1bc084a3caee4e573a2",
+        "raw/#home#verisalis003_gmail_com#compiler-pgo-gokturk-20261013#gcc#build#CMakeFiles#t3core.dir#src#output.cpp.gcda": "27c1f22d548f19df53ba0f981ba1edbb14b52925121f77710d69117b3022b5a4",
+        "raw/#home#verisalis003_gmail_com#compiler-pgo-gokturk-20261013#gcc#build#CMakeFiles#t3core.dir#src#sim_linewheel_lean.cpp.gcda": "9898183efc8ec4ddcb372745d316142e1848c082d0be36d8dda3f3dd6b633b41",
+        "raw/#home#verisalis003_gmail_com#compiler-pgo-gokturk-20261013#gcc#build#CMakeFiles#t3core.dir#src#scenario.cpp.gcda": "c2393003e3fedfb564fe5d326d3519897bae4013642356936a82fdac129af125",
+        "raw/#home#verisalis003_gmail_com#compiler-pgo-gokturk-20261013#gcc#build#CMakeFiles#simulate.dir#src#main.cpp.gcda": "8c8ce89cd7dee08a0731c9f84656c403b85f6c79012e74c2aa6f83b07a837cda",
+        "raw/#home#verisalis003_gmail_com#compiler-pgo-gokturk-20261013#gcc#build#CMakeFiles#t3core.dir#src#sim.cpp.gcda": "cf184add042ac402ca7246f3f92aa79a8837226276b09e5f7b113b039ae123d1",
+        "raw/#home#verisalis003_gmail_com#compiler-pgo-gokturk-20261013#gcc#build#CMakeFiles#t3core.dir#src#parquet.cpp.gcda": "622b3f6339e1e40973ed76e65946b01ac75584841064c5157a57fdb86eb3b2e9",
+        "raw/#home#verisalis003_gmail_com#compiler-pgo-gokturk-20261013#gcc#build#CMakeFiles#t3core.dir#src#sim_wheel.cpp.gcda": "b726e6e474f9af092b9cb13c1876575af7626d59beac64eed02832f06104a531",
+        "raw/#home#verisalis003_gmail_com#compiler-pgo-gokturk-20261013#gcc#build#CMakeFiles#t3core.dir#src#sim_nswheel_lean.cpp.gcda": "57de9f29e42ad58e851f6307cf40d58f08677ba7033e1810a2f76e59ca1e8a1a",
+        "raw/#home#verisalis003_gmail_com#compiler-pgo-gokturk-20261013#gcc#build#CMakeFiles#t3core.dir#src#sim_nswheel.cpp.gcda": "62ca8804d4ad7c0f21b084e34a78857f86cd71a0bf51149b95652ad5f6331654"
+      }
+    }
+  },
+  "canonical_source_archive": {
+    "path": "final-source.tar.gz",
+    "sha256": "ab70f107e5d318425f6de47e0a674a7e6c56ff340dd8e345a94a373f366477fb",
+    "purpose": "Canonical cleaned source for the historical Final build. source_sha256 describes archived engine/ files, not the LLVM-formatted checkout. Source locations are preserved for the original GCC PGO profiles."
+  }
+}
